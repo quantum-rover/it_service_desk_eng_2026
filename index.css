@@ -1,0 +1,388 @@
+/* Resetting Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Social Icons */
+header .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+header .social-icons a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .social-icons a:hover {
+    transform: scale(1.2);
+    color: #d9e6f2;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .logo h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #d9e6f2;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav ul li a i {
+    font-size: 24px;
+    color: #fff;
+}
+
+header nav ul li a i:hover {
+    color: #d9e6f2;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 25%;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #e8f0fe;
+    border-radius: 10px;
+    position: relative;
+    height: fit-content;
+}
+
+/* Make the sidebar sticky on larger screens */
+@media (min-width: 769px) {
+    .sidebar {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+.sidebar .profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a90e2;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CV Content Styles */
+.cv-content {
+    width: 70%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-content h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.cv-content p, .cv-content ul {
+    margin-bottom: 20px;
+}
+
+.cv-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cv-content .period {
+    font-weight: normal;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cv-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Current Role Highlight */
+.job.current-role {
+    border-left: 4px solid #4a90e2;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    background-color: #f8fbff;
+    border-radius: 0 8px 8px 0;
+}
+
+.job.current-role h3 {
+    color: #4a90e2;
+}
+
+/* Footer Styles */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* Certifications Section */
+.certifications {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.certification-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certification-list li {
+    margin: 0 20px;
+}
+
+.certification-list img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.certification-list img:hover {
+    transform: scale(1.1);
+}
+
+#hobbies, #references {
+    text-align: left;
+    margin-left: 0;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: scale(0.7);
+    animation: popupOpen 0.3s ease forwards;
+}
+
+@keyframes popupOpen {
+    to {
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #666;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #e74c3c;
+}
+
+.contact-info h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #2c3e50;
+}
+
+/* Contact Form Styles */
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+#statusMessage {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cv-content {
+        width: 100%;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+
+    .cv-content h3 {
+        flex-direction: column;
+    }
+}
